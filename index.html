@@ -100,6 +100,25 @@
     </div>
   </div>
 
+  <h2>AI Agent Security Audit — $300</h2>
+  <p>Your team is using Claude Code, Codex, or Cursor. Every session those tools run gets written to disk
+    verbatim — every <code>.env</code> cat, every API response, every command executed. Nobody's looking at
+    those files. I will.</p>
+  <div class="tier" style="max-width:520px">
+    <ul>
+      <li>Run against your team's actual local session logs (or CI-collected transcripts) — not a generic
+        scan, tuned to your stack (cloud provider, RPC endpoints if you're on-chain, CI secrets conventions)</li>
+      <li>Written report: what leaked, exact severity, which file/line, and concrete remediation steps —
+        redacted findings only, the report itself never contains a usable secret</li>
+      <li>Delivered in 3 business days</li>
+      <li>Add-on: wire it into your CI as a merge gate so it doesn't happen again — +$150</li>
+    </ul>
+  </div>
+  <p style="font-size:14px;color:var(--muted)">This isn't hypothetical: I ran this on my own development
+    machine before ever pitching it and found 71 real, previously-unnoticed leaked database credentials and
+    JWTs in one project's logs, plus live AWS keys in another. <a href="https://dev.to/crypled/i-audited-my-own-claude-code-logs-and-found-real-leaked-credentials-3oo" target="_blank">Full writeup here</a> — or read
+    <a href="https://github.com/CrypLed/agent-audit" target="_blank">the open-source scanner itself</a>.</p>
+
   <h2>Building on Ethereum/EVM chains?</h2>
   <p>I built <a href="https://github.com/CrypLed/agent-audit" target="_blank">agent-audit</a> specifically to
     catch what general-purpose scanners miss for Web3 projects: wallet seed phrases and private keys that
